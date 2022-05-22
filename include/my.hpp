@@ -7,6 +7,7 @@
 
 #ifndef MY_HPP_
 #define MY_HPP_
+#define BART_SIMPSON "../assets/Bart_simpson.jpg"
 
 class Main
 {
