@@ -12,7 +12,7 @@
 
 Main::Main()
 {
-    init_sprite("./res/simpson_family_tree.png", &start_game_bg_t, &start_game_bg_s);
+    init_sprite("./assets/start_bg.jpg", &start_game_bg_t, &start_game_bg_s);
 }
 
 void init_sprite(std::string str, sf::Texture *t, sf::Sprite *s)
