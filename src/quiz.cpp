@@ -33,13 +33,6 @@ private:
     int questionCounter = 0;
 	int correctAnswerCounter = 0;
 
-public:
-    void setValues(string, string,
-                   string, string,
-                   string, int, int);
-    void quiz();
-};
-
 int quiz(Main m)
 {
     std::ifstream inFile;
