@@ -11,47 +11,44 @@
 
 void init_mainClass(Main *m)
 {
-    Question Q1("What's been the greatest achievement of your life?",
-                "A. Handling Challenges",
-                "B. Securing Awards",
-                "C. Maintaining a happy family",
-                "D. Pursuit of knowledge",
-                "E. Following your bliss");
-    Question Q2("What describes you best?",
-                "A. The ultimate realist",
-                "B. Ready to try anything once",
-                "C. An inspiration to others",
-                "D. A natural leader",
-                "E. A huge sense of duty");
-    Question Q3("What's your hobby?",
-                "A. Blogging",
-                "B. Traveling",
-                "C. Sports",
-                "D. Music",
-                "E. Reading");
-    Question Q4("What's your biggest regret?",
-                "A. Working too much",
-                "B. Not spending enough time with family",
-                "C. Worryinh too much",
-                "D. Taking life too seriously",
-                "E. Not following your passion");
-    Question Q5("What's your greates fear?",
-                "Fear of time",
-                "Fear of failure",
-                "Fear of being judged",
-                "Fear of who you really are",
-                "Fear of loss");
+    m->PersonalityQ.push_back(new Question("What's been the greatest achievement of your life?",
+                                            "A. Handling Challenges",
+                                            "B. Securing Awards",
+                                            "C. Maintaining a happy family",
+                                            "D. Pursuit of knowledge",
+                                            "E. Following your bliss"));
 
-    m->PersonalityQ.push_back(&Q1);
-    m->PersonalityQ.push_back(&Q2);
-    m->PersonalityQ.push_back(&Q3);
-    m->PersonalityQ.push_back(&Q4);
-    m->PersonalityQ.push_back(&Q5);
+    m->PersonalityQ.push_back(new Question("What describes you best?",
+                                            "A. The ultimate realist",
+                                            "B. Ready to try anything once",
+                                            "C. An inspiration to others",
+                                            "D. A natural leader",
+                                            "E. A huge sense of duty"));
+    m->PersonalityQ.push_back(new Question("What's your hobby?",
+                                            "A. Blogging",
+                                            "B. Traveling",
+                                            "C. Sports",
+                                            "D. Music",
+                                            "E. Reading"));
+    m->PersonalityQ.push_back(new Question("What's your biggest regret?",
+                                            "A. Working too much",
+                                            "B. Not spending enough time with family",
+                                            "C. Worryinh too much",
+                                            "D. Taking life too seriously",
+                                            "E. Not following your passion"));
+    m->PersonalityQ.push_back(new Question("What's your greates fear?",
+                                            "A. Fear of time",
+                                            "B. Fear of failure",
+                                            "C. Fear of being judged",
+                                            "D. Fear of who you really are",
+                                            "E. Fear of loss"));
+
 }
 
 int main(int argc, char **argv)
 {
     Main m;
+    init_mainClass(&m);
 
     sf::RenderWindow window(sf::VideoMode(1247, 701), "Simpsons Quiz");
 
@@ -61,6 +58,7 @@ int main(int argc, char **argv)
         }
         else if (m.state == 1){
          //  the_character(&window, &m);
+            PersonalityQuiz(&window, &m);
         }
         else if (m.state == 2){
             //quiz2();

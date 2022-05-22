@@ -38,11 +38,29 @@ class Main
             //family_member = 0 - Maggie
 
         char answers[5];
+        int current_question = 0;
+
+        short temp_switch = 1;
 
         sf::Event event;
 
         sf::Texture start_game_bg_t; //the background image texture of start screen
         sf::Sprite start_game_bg_s; //the background image texture of start screen
+        sf::Texture personalityQuiz_bg_t;
+        sf::Sprite personalityQuiz_bg_s;
+
+        sf::Texture Homer_t;
+        sf::Sprite Homer_s;
+        sf::Texture Marge_t;
+        sf::Sprite Marge_s;
+        sf::Texture Bart_t;
+        sf::Sprite Bart_s;
+        sf::Texture Lisa_t;
+        sf::Sprite Lisa_s;
+        sf::Texture Maggie_t;
+        sf::Sprite Maggie_s;
+
+
 
 
         std::vector<Question*> PersonalityQ;
@@ -68,10 +86,10 @@ class Button
 
 void start_game(sf::RenderWindow *w, Main *m);
 void init_sprite(std::string str, sf::Texture *t, sf::Sprite *s);
-<<<<<<< HEAD
 void the_character(sf::RenderWindow *w, Main *m);
 
-=======
 void start_screen_events(sf::RenderWindow *window, Main *m);
->>>>>>> 2f0d0e59a8ec8fd831aea02ce952af70ecdd573e
+
+void PersonalityQuiz(sf::RenderWindow *w, Main *m);
+bool check_button(sf::Event event, Button B);
 #endif /* !MY_HPP_ */
