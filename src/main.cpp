@@ -33,7 +33,7 @@ void init_mainClass(Main *m)
     m->PersonalityQ.push_back(new Question("What's your biggest regret?",
                                             "A. Working too much",
                                             "B. Not spending enough time with family",
-                                            "C. Worryinh too much",
+                                            "C. Worrying too much",
                                             "D. Taking life too seriously",
                                             "E. Not following your passion"));
     m->PersonalityQ.push_back(new Question("What's your greates fear?",
@@ -57,7 +57,6 @@ int main(int argc, char **argv)
             start_game(&window, &m);
         }
         else if (m.state == 1){
-         //  the_character(&window, &m);
             PersonalityQuiz(&window, &m);
         }
         else if (m.state == 2){

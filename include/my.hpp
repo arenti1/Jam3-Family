@@ -39,7 +39,7 @@ class Main
 
         char answers[5];
         int current_question = 0;
-
+        int match = -1;
         short temp_switch = 1;
 
         sf::Event event;

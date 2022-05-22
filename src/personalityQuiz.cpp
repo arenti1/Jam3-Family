@@ -122,25 +122,23 @@ int calculate_match(char *answers)
 
 void end_screen(sf::RenderWindow *w, Main *m)
 {
-    int match = -1;
-    if (m->temp_switch){
-        match = calculate_match(m->answers);
+    if (m->temp_switch == 1){
+        m->match = calculate_match(m->answers);
         m->temp_switch = 0;
     }
-    printf("Match is %d", match);
-    if (match == 0){
+    if (m->match == 0){
         w->draw(m->Homer_s);
     }
-    else if (match == 1){
+    else if (m->match == 1){
         w->draw(m->Marge_s);
     }
-    else if (match == 2){
+    else if (m->match == 2){
         w->draw(m->Bart_s);
     }
-    else if (match == 3){
+    else if (m->match == 3){
         w->draw(m->Lisa_s);
     }
-    else if (match == 4){
+    else if (m->match == 4){
         w->draw(m->Maggie_s);
     }
 }
@@ -167,6 +165,12 @@ void PersonalityQuiz(sf::RenderWindow *w, Main *m)
     } 
     else if (i == 5){
         end_screen(w, m);
+    }
+    else if (i == 6){
+        m->state = 0;
+        m->current_question = 0;
+        m->temp_switch = 1;
+        m->match = -1;
     }
     personality_test_events(w, m);
 }
