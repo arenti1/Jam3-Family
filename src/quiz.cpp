@@ -17,21 +17,21 @@ int total;
 class Question {
 
 private:
-    sf::Text _question;
-	std::string _questionText;
-	sf::Text _a1;
-	std::string _a1Text;
-	sf::Text _a2;
-	std::string _a2Text;
-	sf::Text _a3;
-	std::string _a3Text;
-	sf::Text _a4;
-	std::string _a4Text;
-	sf::Text _correctAnswer;
-	std::string _correctAnswerText;
+    sf::Text question;
+	std::string questionText;
+	sf::Text a1;
+	std::string a1Text;
+	sf::Text a2;
+	std::string a2Text;
+	sf::Text a3;
+	std::string a3Text;
+	sf::Text a4;
+	std::string a4Text;
+	sf::Text correctAnswer;
+	std::string correctAnswerText;
 
-    int _questionCounter = 0;
-	int _correctAnswerCounter = 0;
+    int questionCounter = 0;
+	int correctAnswerCounter = 0;
 
 public:
     void setValues(string, string,
