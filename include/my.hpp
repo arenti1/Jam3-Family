@@ -12,6 +12,7 @@ class Main
 {
     public:
         short state = 0;
+        short character[4];
 };
 
 #endif /* !MY_HPP_ */
