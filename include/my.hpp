@@ -12,6 +12,11 @@ class Main
 {
     public:
         short state = 0;
+
+        sf::Texture start_game_bg_t;
+        sf::Sprite start_game_bg_s;
+
+        Main();
 };
 
 #endif /* !MY_HPP_ */
