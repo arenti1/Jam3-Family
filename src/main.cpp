@@ -22,10 +22,13 @@ int main(int argc, char **argv)
             quiz1();
         }
         else if (m.state == 2){
-            quiz1(m.character);
+            quiz1();
         }
         else if (m.state == 3){
-            end_game();
+            end_game1();
+        }
+        else if (m.state == 4){
+            end_game2();
         }
         window.display();
     }
