@@ -9,21 +9,64 @@
 #include <SFML/Graphics.hpp>
 #include "../include/my.hpp"
 
-int event_manager (sf::RenderWindow window, sf::Event event, sf::Vector2f button_pos)
+//CHECK IF THE INPUTED BUTTON IS CLICKED OR NOT
+bool check_button(sf::Event event, Button B)
 {
-    while (window.pollEvent(event)) {
-        switch (event.type) {
+    if (event.mouseButton.x > B.x && event.mouseButton.x < B.x + B.w &&
+        event.mouseButton.y > B.y && event.mouseButton.y < B.y + B.h) {
+            return true;
+    }
+    return false;
+}
+
+//FUNCTION THAT CONTROLS EVENTS OF THE START SCREEN
+void start_screen_events(sf::RenderWindow *window, Main *m)
+{
+
+    Button Homer(220, 267, 80, 100);
+    Button Marge(314, 27, 80, 100);
+    Button Bart(192, 401, 80, 100);
+    Button Lisa(269, 402, 80, 100);
+    Button Maggie(348, 400, 80, 100);
+
+    Button sg(80, 541, 690, 120); //start game button
+
+    
+
+    while (window->pollEvent(m->event)) {
+        switch (m->event.type) {
             case sf::Event::Closed:
-                window.close();
+                window->close();
                 break;
             case sf::Event::MouseButtonPressed:
-                if (event.mouseButton.button == sf::Mouse::Right &&
-                    (event.mouseButton.x >= button_pos.x && event.mouseButton.x <= button_pos.x + 150)
-                    && (event.mouseButton.y >= button_pos.y && event.mouseButton.y <= button_pos.y + 30)) {
-                    // Do something
+                if (m->event.mouseButton.button == sf::Mouse::Right && check_button(m->event, sg)){
+                    m->state = 1;
+                }
+                else if (m->event.mouseButton.button == sf::Mouse::Right && check_button(m->event, Homer)){
+                    m->state = 2;
+                    m->family_member = 0;
+                }
+                else if (m->event.mouseButton.button == sf::Mouse::Right && check_button(m->event, Marge)){
+                    m->state = 2;
+                    m->family_member = 1;  
+                }
+                else if (m->event.mouseButton.button == sf::Mouse::Right && check_button(m->event, Bart)){
+                    m->state = 2;
+                    m->family_member = 2;  
+                }
+                else if (m->event.mouseButton.button == sf::Mouse::Right && check_button(m->event, Lisa)){
+                    m->state = 2;
+                    m->family_member = 3;  
+                }
+                else if (m->event.mouseButton.button == sf::Mouse::Right && check_button(m->event, Maggie)){
+                    m->state = 2;
+                    m->family_member = 4;  
                 }
                 break;
-            default:
+            case sf::Event::KeyPressed:
+                if (m->event.key.code == sf::Keyboard::Q){
+                    exit(1);
+                }
                 break;
         }
     }
