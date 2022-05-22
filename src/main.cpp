@@ -22,7 +22,7 @@ int main(int argc, char **argv)
             //quiz1(m.character);
         }
         else if (m.state == 2){
-            //quiz1();
+            //quiz2();
         }
         else if (m.state == 3){
             //end_game1();

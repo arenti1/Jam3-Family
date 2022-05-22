@@ -24,4 +24,5 @@ class Main
 
 void start_game(sf::RenderWindow *w, Main *m);
 void init_sprite(std::string str, sf::Texture *t, sf::Sprite *s);
+//int quiz2(Main m);
 #endif /* !MY_HPP_ */
