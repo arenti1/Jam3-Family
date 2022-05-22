@@ -14,6 +14,11 @@ class Main
     public:
         short state = 0; //state of the game 
         short family_member; //which member is chosen for the quiz
+            //family_member = 0 - Homer
+            //family_member = 0 - Marge
+            //family_member = 0 - Bart
+            //family_member = 0 - Lisa
+            //family_member = 0 - Maggie
 
         sf::Event event;
 
@@ -38,9 +43,5 @@ class Button
 
 void start_game(sf::RenderWindow *w, Main *m);
 void init_sprite(std::string str, sf::Texture *t, sf::Sprite *s);
-<<<<<<< HEAD
 void start_screen_events(sf::RenderWindow *window, Main *m);
-=======
-//int quiz2(Main m);
->>>>>>> 33007568f9a51a5c5a0670032a53284589450c54
 #endif /* !MY_HPP_ */

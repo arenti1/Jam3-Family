@@ -22,14 +22,15 @@ bool check_button(sf::Event event, Button B)
 //FUNCTION THAT CONTROLS EVENTS OF THE START SCREEN
 void start_screen_events(sf::RenderWindow *window, Main *m)
 {
-
+    //BUTTON FOR SIMPSON QUIZ
     Button Homer(220, 267, 80, 100);
     Button Marge(314, 27, 80, 100);
     Button Bart(192, 401, 80, 100);
     Button Lisa(269, 402, 80, 100);
     Button Maggie(348, 400, 80, 100);
 
-    Button sg(80, 541, 690, 120); //start game button
+    //BUTTON FOR THE PERSONALITY QUIZ
+    Button sg(80, 541, 690, 120);
 
     
 
@@ -39,26 +40,26 @@ void start_screen_events(sf::RenderWindow *window, Main *m)
                 window->close();
                 break;
             case sf::Event::MouseButtonPressed:
-                if (m->event.mouseButton.button == sf::Mouse::Right && check_button(m->event, sg)){
+                if (m->event.mouseButton.button == sf::Mouse::Left && check_button(m->event, sg)){
                     m->state = 1;
                 }
-                else if (m->event.mouseButton.button == sf::Mouse::Right && check_button(m->event, Homer)){
+                else if (m->event.mouseButton.button == sf::Mouse::Left && check_button(m->event, Homer)){
                     m->state = 2;
                     m->family_member = 0;
                 }
-                else if (m->event.mouseButton.button == sf::Mouse::Right && check_button(m->event, Marge)){
+                else if (m->event.mouseButton.button == sf::Mouse::Left && check_button(m->event, Marge)){
                     m->state = 2;
                     m->family_member = 1;  
                 }
-                else if (m->event.mouseButton.button == sf::Mouse::Right && check_button(m->event, Bart)){
+                else if (m->event.mouseButton.button == sf::Mouse::Left && check_button(m->event, Bart)){
                     m->state = 2;
                     m->family_member = 2;  
                 }
-                else if (m->event.mouseButton.button == sf::Mouse::Right && check_button(m->event, Lisa)){
+                else if (m->event.mouseButton.button == sf::Mouse::Left && check_button(m->event, Lisa)){
                     m->state = 2;
                     m->family_member = 3;  
                 }
-                else if (m->event.mouseButton.button == sf::Mouse::Right && check_button(m->event, Maggie)){
+                else if (m->event.mouseButton.button == sf::Mouse::Left && check_button(m->event, Maggie)){
                     m->state = 2;
                     m->family_member = 4;  
                 }
