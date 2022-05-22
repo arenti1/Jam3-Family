@@ -7,6 +7,7 @@
 
 #ifndef MY_HPP_
 #define MY_HPP_
+#define BART_SIMPSON "../assets/Bart_simpson.jpg"
 
 class Main
 {
@@ -37,5 +38,9 @@ class Button
 
 void start_game(sf::RenderWindow *w, Main *m);
 void init_sprite(std::string str, sf::Texture *t, sf::Sprite *s);
+<<<<<<< HEAD
 void start_screen_events(sf::RenderWindow *window, Main *m);
+=======
+//int quiz2(Main m);
+>>>>>>> 33007568f9a51a5c5a0670032a53284589450c54
 #endif /* !MY_HPP_ */

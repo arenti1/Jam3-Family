@@ -14,7 +14,7 @@
 int guessed;
 int total;
 
-class Question {
+class QandA {
 
 private:
     sf::Text question;
@@ -32,15 +32,9 @@ private:
 
     int questionCounter = 0;
 	int correctAnswerCounter = 0;
+}
 
-public:
-    void setValues(string, string,
-                   string, string,
-                   string, int, int);
-    void quiz();
-};
-
-int quiz(Main m)
+int quiz2(Main m)
 {
     std::ifstream inFile;
 
@@ -53,4 +47,6 @@ int quiz(Main m)
 			inFile.open("");
 			break;
 		}
+    
+
 }
