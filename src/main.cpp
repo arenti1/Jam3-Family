@@ -12,7 +12,7 @@
 int main(int argc, char **argv)
 {
     Main m;
-    sf::RenderWindow window(sf::VideoMode(1920, 1080), "Learn Piano");
+    sf::RenderWindow window(sf::VideoMode(1920, 1080), "Simpsons Quiz");
 
     while (window.isOpen()){
         if (m.state == 0){
