@@ -9,6 +9,19 @@
 #define MY_HPP_
 #define BART_SIMPSON "../assets/Bart_simpson.jpg"
 
+class Question
+{
+    public:
+        std::string question;
+        std::string A;
+        std::string B;
+        std::string C;
+        std::string D;
+        std::string E;
+    Question(std::string q, std::string a, std::string b, std::string c, std::string d, std::string e) :
+                question(q), A(a), B(b), C(c), D(d), E(e) {}
+};
+
 class Main
 {
     public:
@@ -20,10 +33,15 @@ class Main
             //family_member = 0 - Lisa
             //family_member = 0 - Maggie
 
+        char answers[5];
+
         sf::Event event;
 
         sf::Texture start_game_bg_t; //the background image texture of start screen
         sf::Sprite start_game_bg_s; //the background image texture of start screen
+
+
+        std::vector<Question*> PersonalityQ;
 
         Main();
 };
