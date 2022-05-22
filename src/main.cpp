@@ -19,7 +19,7 @@ int main(int argc, char **argv)
             start_game(&window, &m);
         }
         else if (m.state == 1){
-           the_character(&window, &m);
+         //  the_character(&window, &m);
         }
         else if (m.state == 2){
             //quiz1();

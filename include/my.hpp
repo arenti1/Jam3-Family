@@ -13,7 +13,9 @@ class Main
     public:
         short state = 0;
         short character[4];
-
+        int simpson = 0;
+        int score = 0;
+        short answer = 0; // 1 = yes and 2 = no
         sf::Event event;
 
         sf::Texture start_game_bg_t;
