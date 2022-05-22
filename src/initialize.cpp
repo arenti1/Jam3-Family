@@ -13,6 +13,7 @@
 Main::Main()
 {
     init_sprite("./assets/start_bg.jpg", &start_game_bg_t, &start_game_bg_s);
+    init_sprite("./assets/simpsons_background.png", &the_character_bg_t, &the_character_bg_s);
 }
 
 void init_sprite(std::string str, sf::Texture *t, sf::Sprite *s)
