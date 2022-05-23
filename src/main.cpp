@@ -51,16 +51,22 @@ int main(int argc, char **argv)
     init_mainClass(&m);
 
     sf::RenderWindow window(sf::VideoMode(1247, 701), "Simpsons Quiz");
-
+   
+    if (sf::Keyboard::Q)
+        exit;    
+   
     while (window.isOpen()){
         if (m.state == 0){
             start_game(&window, &m);
         }
         else if (m.state == 1){
             PersonalityQuiz(&window, &m);
+           
         }
         else if (m.state == 2){
-            //quiz2();
+            the_character(&window, &m);
+           // display_question_magie(&window, &m);
+
         }
         else if (m.state == 3){
             //end_game1();

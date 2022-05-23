@@ -9,12 +9,14 @@ SRC		=	src/initialize.cpp	\
 			src/start.cpp	\
 			src/events.cpp	\
 			src/personalityQuiz.cpp	\
+			src/the_character.cpp	\
 			src/main.cpp	\
 
 SRC2	=	initialize.cpp	\
 			start.cpp	\
 			events.cpp	\
 			personalityQuiz.cpp		\
+			the_character.cpp	\
 			main.cpp	\
 
 OBJ	=	$(SRC2:.cpp=.o)
