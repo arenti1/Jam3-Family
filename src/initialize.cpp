@@ -71,10 +71,10 @@ Main::Main()
     marge_q[4] = 1;
 
     init_sprite("./assets/homero_q1.png", &q1h_t, &q1h_s);
-    init_sprite("./assets/homero_q2.png", &q1h_t, &q1h_s);
-    init_sprite("./assets/homero_q3.png", &q1h_t, &q1h_s);
-    init_sprite("./assets/homero_q4.png", &q1h_t, &q1h_s);
-    init_sprite("./assets/homero_q5.png", &q1h_t, &q1h_s);
+    init_sprite("./assets/homero_q2.png", &q2h_t, &q2h_s);
+    init_sprite("./assets/homero_q3.png", &q3h_t, &q3h_s);
+    init_sprite("./assets/homero_q4.png", &q4h_t, &q4h_s);
+    init_sprite("./assets/homero_q5.png", &q5h_t, &q5h_s);
 
     homero_q[0] = 2;
     homero_q[1] = 1;

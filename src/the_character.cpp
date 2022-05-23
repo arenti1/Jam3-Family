@@ -15,7 +15,22 @@ void the_character(sf::RenderWindow *w, Main *m)
     {
         character_quiz(w, m);
     }
+    if(m->simpson == 1){
+        display_question_homero(w, m);
+    }
+    else if(m->simpson == 2){
+    display_question_marge(w, m);
+    }
+    else if(m->simpson == 3){
+    display_question_brat(w, m);
+    }
+    else if(m->simpson == 4){
+    display_question_lisa(w, m);
+    }
+    else if(m->simpson == 5){
     display_question_magie(w, m);
+    }
+
 }
 
 void character_quiz(sf::RenderWindow *w, Main *m)
@@ -44,7 +59,7 @@ void homero_quiz(sf::RenderWindow *w, Main *m)
             y > 171 &&
             y < 230)
         {
-            if (m->maggie_q[1] == 1)
+            if (m->homero_q[0] == 1)
                 m->score++;
             else
             {
@@ -58,7 +73,7 @@ void homero_quiz(sf::RenderWindow *w, Main *m)
                  y > 165 &&
                  y < 220)
         {
-            if (m->maggie_q[0] == 2)
+            if (m->homero_q[0] == 2)
                 m->score++;
             else
             {
@@ -80,7 +95,7 @@ void marge_quiz(sf::RenderWindow *w, Main *m)
             y > 580 &&
             y < 635)
         {
-            if (m->maggie_q[1] == 1)
+            if (m->marge_q[0] == 1)
                 m->score++;
             else
             {
@@ -93,7 +108,7 @@ void marge_quiz(sf::RenderWindow *w, Main *m)
                  y > 585 &&
                  y < 635)
         {
-            if (m->maggie_q[0] == 2)
+            if (m->marge_q[0] == 2)
                 m->score++;
             else
             {
@@ -115,7 +130,7 @@ void brat_quiz(sf::RenderWindow *w, Main *m)
             y > 435 &&
             y < 502)
         {
-            if (m->maggie_q[1] == 1)
+            if (m->brat_q[0] == 1)
                 m->score++;
             else
             {
@@ -128,7 +143,7 @@ void brat_quiz(sf::RenderWindow *w, Main *m)
                  y > 431 &&
                  y < 490)
         {
-            if (m->maggie_q[0] == 2)
+            if (m->brat_q[0] == 2)
                 m->score++;
             else
             {
@@ -150,7 +165,7 @@ void lisa_quiz(sf::RenderWindow *w, Main *m)
             y > 225 &&
             y < 285)
         {
-            if (m->maggie_q[1] == 1)
+            if (m->lisa_q[0] == 1)
                 m->score++;
             else
             {
@@ -163,7 +178,7 @@ void lisa_quiz(sf::RenderWindow *w, Main *m)
                  y > 223 &&
                  y < 288)
         {
-            if (m->maggie_q[0] == 2)
+            if (m->lisa_q[0] == 2)
                 m->score++;
             else
             {
@@ -185,7 +200,7 @@ void magie_quiz(sf::RenderWindow *w, Main *m)
             y > 345 &&
             y < 435)
         {
-            if (m->maggie_q[1] == 1)
+            if (m->maggie_q[0] == 1)
                 m->score++;
             else
             {
