@@ -38,10 +38,12 @@ void character_quiz(sf::RenderWindow *w, Main *m)
 
     if (m->simpson == 1)
         homero_quiz(w, m);
-    else if (m->simpson == 2)
+    else if (m->simpson == 2){
         marge_quiz(w, m);
-    else if (m->simpson == 3)
+    }
+    else if (m->simpson == 3){
         brat_quiz(w, m);
+    }
     else if (m->simpson == 4)
         lisa_quiz(w, m);
     else if (m->simpson == 5)
@@ -259,6 +261,7 @@ void display_question_magie(sf::RenderWindow *w, Main *m)
     else if (i > 6)
     {
         m->current_ques = 0;
+        m->state = 0;
     }
 }
 
@@ -292,6 +295,7 @@ void display_question_homero(sf::RenderWindow *w, Main *m)
     else if (i > 6)
     {
         m->current_ques = 0;
+        m->state = 0;
     }
     
 }
@@ -326,6 +330,7 @@ void display_question_marge(sf::RenderWindow *w, Main *m)
     else if (i > 6)
     {
         m->current_ques = 0;
+        m->state = 0;
     }
 }
 
@@ -359,6 +364,7 @@ void display_question_brat(sf::RenderWindow *w, Main *m)
     else if (i < 6)
     {
         m->current_ques = 0;
+        m->state = 0;
     }
 }
 
@@ -392,5 +398,6 @@ void display_question_lisa(sf::RenderWindow *w, Main *m)
     else if (i < 6)
     {
         m->current_ques = 0;
+        m->state = 0;
     }
 }

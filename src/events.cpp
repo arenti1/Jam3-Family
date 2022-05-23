@@ -25,7 +25,7 @@ void start_screen_events(sf::RenderWindow *window, Main *m)
 {
     // BUTTON FOR SIMPSON QUIZ
     Button Homer(220, 267, 80, 100);
-    Button Marge(314, 27, 80, 100);
+    Button Marge(314, 267, 80, 100);
     Button Bart(192, 401, 80, 100);
     Button Lisa(269, 402, 80, 100);
     Button Maggie(348, 400, 80, 100);
